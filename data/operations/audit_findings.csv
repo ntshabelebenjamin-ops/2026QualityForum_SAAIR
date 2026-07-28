@@ -1,1 +1,11 @@
-
+AuditFindingID,AuditType,AuditDate,School,FindingCategory,FindingDescription,RiskRating,Recommendation,ResponsibleOffice,ResponsiblePerson,Status,TargetClosureDate
+AF001,Internal Audit,2026-03-15,University Wide,Governance,Incomplete documentation supporting strategic KPI reporting,Medium,Implement standard evidence repository,Institutional Planning,Director IPQA,In Progress,2026-09-30
+AF002,CHE Programme Review,2026-04-10,School of Pharmacy,Teaching and Learning,Assessment feedback exceeds institutional turnaround standards,High,Review assessment workflow and monitoring,Academic Affairs,Dean Pharmacy,Open,2026-11-30
+AF003,Internal Audit,2026-05-20,University Wide,Document Management,Version control inconsistencies identified in policy documents,Medium,Implement document management procedures,Quality Assurance,Director QA,Closed,2026-08-31
+AF004,DHET Review,2026-06-05,University Wide,Performance Reporting,Performance evidence not consistently linked to reported KPIs,High,Strengthen evidence verification before submission,Institutional Planning,Director IPQA,In Progress,2026-10-31
+AF005,HPCSA Accreditation,2026-05-12,School of Medicine,Clinical Training,Clinical placement records require improved documentation,Medium,Digitise clinical placement records,School of Medicine,Dean Medicine,In Progress,2026-12-31
+AF006,SAPC Accreditation,2026-04-18,School of Pharmacy,Infrastructure,Simulation laboratory equipment below recommended standard,High,Upgrade simulation laboratories,Facilities Management,Director Facilities,Open,2027-03-31
+AF007,SANC Accreditation,2026-05-28,School of Health Care Sciences,Curriculum,Evidence of graduate attribute mapping requires strengthening,Medium,Review curriculum mapping process,Curriculum Committee,Chair Curriculum Committee,In Progress,2026-11-30
+AF008,External Audit,2026-06-15,University Wide,Cybersecurity,Multi-factor authentication not implemented across all systems,High,Implement institution-wide MFA,ICT,CIO,In Progress,2026-12-15
+AF009,Internal Audit,2026-07-01,University Wide,Risk Management,Risk registers not updated consistently across departments,Medium,Standardise quarterly risk review process,Risk Management Office,Risk Manager,Open,2026-10-31
+AF010,CHE Institutional Audit,2026-07-10,University Wide,Continuous Improvement,Improvement plans require stronger monitoring and reporting,Medium,Develop institutional action tracking dashboard,Quality Assurance,Director QA,In Progress,2026-12-31
