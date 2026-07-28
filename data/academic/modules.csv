@@ -1,1 +1,11 @@
-
+ModuleCode,ModuleName,ProgrammeID,School,Credits,Semester,PassRate,FailureRate,AverageMark,AssessmentMethod,ReviewStatus,ModuleCoordinator
+MED101,Human Anatomy I,P001,School of Medicine,16,1,88,12,71,Examinations,Reviewed,Dr Mokoena
+MED201,Physiology II,P001,School of Medicine,16,2,81,19,68,Examinations,Reviewed,Dr Naidoo
+PHA101,Pharmaceutical Chemistry,P003,School of Pharmacy,16,1,76,24,64,Practical and Exam,Under Review,Prof Smith
+PHA202,Clinical Pharmacy,P003,School of Pharmacy,16,2,69,31,59,Clinical Assessment,Under Review,Dr Dlamini
+DEN101,Oral Biology,P002,School of Oral Health Sciences,16,1,84,16,70,Examinations,Reviewed,Dr Khumalo
+NUR101,Fundamentals of Nursing,P004,School of Health Care Sciences,16,1,91,9,74,OSCE,Reviewed,Prof Nkosi
+NUR202,Community Nursing,P004,School of Health Care Sciences,16,2,86,14,72,Portfolio,Reviewed,Dr Molefe
+BIO101,Biochemistry,P005,School of Science and Technology,16,1,79,21,66,Examinations,Reviewed,Dr Sithole
+BIO202,Genetics,P005,School of Science and Technology,16,2,73,27,61,Research Project,Under Review,Dr Maseko
+MED301,Clinical Medicine,P001,School of Medicine,32,2,83,17,69,Clinical Assessment,Reviewed,Prof Ndlovu
