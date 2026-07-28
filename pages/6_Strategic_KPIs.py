@@ -9,20 +9,9 @@ from utils.data_loader import (
     load_actions
 )
 
-# Clean Status fields
-kpis["Status"] = (
-    kpis["Status"]
-    .astype(str)
-    .str.strip()
-    .str.title()
-)
-
-actions["Status"] = (
-    actions["Status"]
-    .astype(str)
-    .str.strip()
-    .str.title()
-)
+# ==========================================================
+# PAGE CONFIG
+# ==========================================================
 
 st.set_page_config(
     page_title="Strategic KPIs",
@@ -31,7 +20,6 @@ st.set_page_config(
 )
 
 st.title("📈 Strategic KPIs")
-
 st.caption(
     "Institutional strategic performance, annual performance plan and enterprise risk"
 )
@@ -45,27 +33,52 @@ app = load_app()
 risks = load_risks()
 actions = load_actions()
 
+# ==========================================================
+# CHECK DATA
+# ==========================================================
+
 if kpis.empty:
     st.warning("No Strategic KPI data available.")
     st.stop()
 
 # ==========================================================
-# SIDEBAR
+# CLEAN DATA
+# ==========================================================
+
+for df, column in [
+    (kpis, "Status"),
+    (actions, "Status"),
+    (risks, "RiskLevel")
+]:
+    if column in df.columns:
+        df[column] = (
+            df[column]
+            .astype(str)
+            .str.strip()
+            .str.title()
+        )
+
+# ==========================================================
+# SIDEBAR FILTER
 # ==========================================================
 
 objectives = ["All"] + sorted(
     kpis["StrategicObjective"].dropna().unique().tolist()
 )
 
-selected = st.sidebar.selectbox(
+selected_objective = st.sidebar.selectbox(
     "Strategic Objective",
     objectives
 )
 
-if selected != "All":
+if selected_objective != "All":
     kpis = kpis[
-        kpis["StrategicObjective"] == selected
+        kpis["StrategicObjective"] == selected_objective
     ]
+
+if kpis.empty:
+    st.warning("No KPI records found for the selected objective.")
+    st.stop()
 
 # ==========================================================
 # KPI SUMMARY
@@ -76,39 +89,37 @@ overall = round(
     1
 )
 
+total_kpis = len(kpis)
+
 achieved = (
-    kpis["Status"] == "Achieved"
+    kpis["Status"]
+    .str.contains("Achieved", case=False, na=False)
+).sum()
+
+on_track = (
+    kpis["Status"]
+    .str.contains("On Track", case=False, na=False)
 ).sum()
 
 at_risk = (
-    kpis["Status"] == "At Risk"
+    kpis["Status"]
+    .str.contains("At Risk", case=False, na=False)
 ).sum()
 
 overdue = (
-    actions["Status"] == "Overdue"
+    actions["Status"]
+    .str.contains("Overdue", case=False, na=False)
 ).sum()
 
-c1, c2, c3, c4 = st.columns(4)
+c1, c2, c3, c4, c5 = st.columns(5)
 
-c1.metric(
-    "Overall Performance",
-    f"{overall}%"
-)
+c1.metric("Overall Performance", f"{overall}%")
+c2.metric("Total KPIs", total_kpis)
+c3.metric("Achieved", achieved)
+c4.metric("On Track", on_track)
+c5.metric("At Risk", at_risk)
 
-c2.metric(
-    "KPIs Achieved",
-    achieved
-)
-
-c3.metric(
-    "KPIs At Risk",
-    at_risk
-)
-
-c4.metric(
-    "Overdue Actions",
-    overdue
-)
+st.metric("Overdue Actions", overdue)
 
 st.divider()
 
@@ -118,15 +129,14 @@ st.divider()
 
 st.subheader("Performance by Strategic Objective")
 
-objective = (
-    kpis
-    .groupby("StrategicObjective")["PerformancePercent"]
+objective_perf = (
+    kpis.groupby("StrategicObjective")["PerformancePercent"]
     .mean()
     .reset_index()
 )
 
 fig1 = px.bar(
-    objective,
+    objective_perf,
     x="StrategicObjective",
     y="PerformancePercent",
     color="PerformancePercent",
@@ -134,74 +144,67 @@ fig1 = px.bar(
     title="Average Performance by Strategic Objective"
 )
 
-st.plotly_chart(
-    fig1,
-    use_container_width=True
-)
+st.plotly_chart(fig1, use_container_width=True)
 
 # ==========================================================
 # KPI STATUS
 # ==========================================================
 
-st.subheader("KPI Status")
+st.subheader("Strategic KPI Status")
 
-status = (
+status_df = (
     kpis["Status"]
     .value_counts()
     .reset_index()
 )
 
-status.columns = [
+status_df.columns = [
     "Status",
     "Count"
 ]
 
 fig2 = px.pie(
-    status,
+    status_df,
     values="Count",
     names="Status",
     hole=0.55,
-    title="Strategic KPI Status"
+    title="KPI Status Distribution"
 )
 
-st.plotly_chart(
-    fig2,
-    use_container_width=True
-)
+st.plotly_chart(fig2, use_container_width=True)
 
 # ==========================================================
-# ENTERPRISE RISK
+# RISK MATRIX
 # ==========================================================
 
-st.subheader("Enterprise Risk Register")
+if not risks.empty:
 
-fig3 = px.scatter(
-    risks,
-    x="Likelihood",
-    y="Impact",
-    size="RiskScore",
-    color="RiskLevel",
-    hover_name="RiskDescription",
-    title="Institutional Risk Matrix"
-)
+    st.subheader("Enterprise Risk Matrix")
 
-st.plotly_chart(
-    fig3,
-    use_container_width=True
-)
+    fig3 = px.scatter(
+        risks,
+        x="Likelihood",
+        y="Impact",
+        size="RiskScore",
+        color="RiskLevel",
+        hover_name="RiskDescription",
+        title="Institutional Risk Matrix"
+    )
+
+    st.plotly_chart(fig3, use_container_width=True)
 
 # ==========================================================
-# RISK REGISTER
+# HIGH RISKS
 # ==========================================================
 
-st.subheader("High Risk Register")
+st.subheader("High Institutional Risks")
 
 high = risks[
     risks["RiskLevel"] == "High"
 ]
 
 if high.empty:
-    st.success("No high risks recorded.")
+    st.success("No High Risks Recorded")
 else:
     st.dataframe(
         high,
@@ -210,7 +213,7 @@ else:
     )
 
 # ==========================================================
-# ACTION TRACKER
+# OUTSTANDING ACTIONS
 # ==========================================================
 
 st.subheader("Outstanding Actions")
@@ -219,14 +222,17 @@ pending = actions[
     actions["Status"] != "Completed"
 ]
 
-st.dataframe(
-    pending,
-    use_container_width=True,
-    hide_index=True
-)
+if pending.empty:
+    st.success("No Outstanding Actions")
+else:
+    st.dataframe(
+        pending,
+        use_container_width=True,
+        hide_index=True
+    )
 
 # ==========================================================
-# APP PERFORMANCE
+# ANNUAL PERFORMANCE PLAN
 # ==========================================================
 
 st.subheader("Annual Performance Plan")
@@ -238,47 +244,43 @@ st.dataframe(
 )
 
 # ==========================================================
-# AI EXECUTIVE BRIEF
+# AI EXECUTIVE SUMMARY
 # ==========================================================
 
-st.subheader("🤖 Executive Brief")
+st.subheader("🤖 QAInsight AI Executive Summary")
 
-priority = kpis.loc[
+lowest = kpis.loc[
     kpis["PerformancePercent"].idxmin()
 ]
 
 st.info(f"""
-### Institutional Summary
+### Executive Summary
 
-Overall institutional performance is **{overall}%**.
+Overall institutional performance is **{overall}%** across **{total_kpis} KPIs**.
 
 ### Priority KPI
 
-**Strategic Objective:** {priority['StrategicObjective']}
+**Strategic Objective:** {lowest['StrategicObjective']}
 
-**KPI:** {priority['KPI']}
+**KPI:** {lowest['KPI']}
 
-Performance achieved:
+Performance: **{lowest['PerformancePercent']}%**
 
-**{priority['PerformancePercent']}%**
+### Recommended Executive Actions
 
-### Executive Recommendations
+• Prioritise KPIs below target.
 
-• Prioritise underperforming strategic objectives.
+• Monitor enterprise risks monthly.
 
-• Accelerate overdue institutional actions.
+• Close overdue institutional actions.
 
-• Monitor high enterprise risks monthly.
+• Align improvement plans with strategic objectives.
 
-• Review KPIs below target with responsible offices.
-
-• Align improvement plans with institutional strategy.
-
-• Escalate unresolved risks to Executive Management.
+• Continue evidence-based monitoring through QAInsight AI.
 """)
 
 # ==========================================================
-# DOWNLOAD
+# DOWNLOAD REPORT
 # ==========================================================
 
 st.divider()
@@ -286,8 +288,8 @@ st.divider()
 csv = kpis.to_csv(index=False)
 
 st.download_button(
-    "📥 Download Strategic KPI Report",
-    csv,
-    "Strategic_KPI_Report.csv",
-    "text/csv"
+    label="📥 Download Strategic KPI Report",
+    data=csv,
+    file_name="Strategic_KPI_Report.csv",
+    mime="text/csv"
 )
