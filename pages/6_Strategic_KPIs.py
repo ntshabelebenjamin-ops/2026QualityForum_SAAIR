@@ -216,3 +216,187 @@ st.metric(
 
 st.divider()
 
+# ==========================================================
+# PERFORMANCE BY STRATEGIC OBJECTIVE
+# ==========================================================
+
+st.subheader("📊 Performance by Strategic Objective")
+
+objective_perf = (
+    kpis.groupby("StrategicObjective", as_index=False)
+    ["PerformancePercent"]
+    .mean()
+)
+
+objective_perf = objective_perf.sort_values(
+    by="PerformancePercent",
+    ascending=False
+)
+
+fig1 = px.bar(
+    objective_perf,
+    x="StrategicObjective",
+    y="PerformancePercent",
+    color="PerformancePercent",
+    text_auto=".1f",
+    title="Average Performance by Strategic Objective"
+)
+
+fig1.update_layout(
+    xaxis_title="Strategic Objective",
+    yaxis_title="Average Performance (%)",
+    coloraxis_showscale=False
+)
+
+fig1.update_traces(
+    textposition="outside"
+)
+
+st.plotly_chart(
+    fig1,
+    use_container_width=True
+)
+
+# ==========================================================
+# KPI STATUS DISTRIBUTION
+# ==========================================================
+
+st.subheader("🎯 Strategic KPI Status")
+
+status_df = (
+    kpis["Status"]
+    .fillna("Unknown")
+    .value_counts()
+    .rename_axis("Status")
+    .reset_index(name="Count")
+)
+
+fig2 = px.pie(
+    status_df,
+    names="Status",
+    values="Count",
+    hole=0.55,
+    title="Strategic KPI Status Distribution"
+)
+
+fig2.update_traces(
+    textposition="inside",
+    textinfo="percent+label"
+)
+
+st.plotly_chart(
+    fig2,
+    use_container_width=True
+)
+
+# ==========================================================
+# ENTERPRISE RISK MATRIX
+# ==========================================================
+
+if not risks.empty:
+
+    st.subheader("⚠️ Enterprise Risk Matrix")
+
+    # Convert numeric columns
+    for col in ["Likelihood", "Impact", "RiskScore"]:
+        if col in risks.columns:
+            risks[col] = pd.to_numeric(
+                risks[col],
+                errors="coerce"
+            )
+
+    fig3 = px.scatter(
+        risks,
+        x="Likelihood",
+        y="Impact",
+        size="RiskScore",
+        color="RiskLevel",
+        hover_name="RiskDescription",
+        hover_data=["RiskOwner"],
+        title="Institutional Risk Matrix"
+    )
+
+    fig3.update_layout(
+        xaxis_title="Likelihood",
+        yaxis_title="Impact"
+    )
+
+    st.plotly_chart(
+        fig3,
+        use_container_width=True
+    )
+
+else:
+
+    st.info("No institutional risk data available.")
+
+
+# ==========================================================
+# HIGH INSTITUTIONAL RISKS
+# ==========================================================
+
+st.subheader("🚨 High Institutional Risks")
+
+if not risks.empty:
+
+    high = risks[
+        risks["RiskLevel"]
+        .astype(str)
+        .str.upper()
+        .eq("HIGH")
+    ]
+
+    if high.empty:
+
+        st.success(
+            "No High Risks Recorded"
+        )
+
+    else:
+
+        st.dataframe(
+            high.sort_values(
+                "RiskScore",
+                ascending=False
+            ),
+            use_container_width=True,
+            hide_index=True
+        )
+
+else:
+
+    st.info("No risk register available.")
+
+# ==========================================================
+# OUTSTANDING ACTIONS
+# ==========================================================
+
+st.subheader("📋 Outstanding Actions")
+
+if not actions.empty:
+
+    pending = actions[
+        actions["Status"]
+        .astype(str)
+        .str.lower()
+        .str.strip()
+        != "completed"
+    ]
+
+    if pending.empty:
+
+        st.success(
+            "All institutional actions have been completed."
+        )
+
+    else:
+
+        st.dataframe(
+            pending,
+            use_container_width=True,
+            hide_index=True
+        )
+
+else:
+
+    st.info("No action tracker available.")
