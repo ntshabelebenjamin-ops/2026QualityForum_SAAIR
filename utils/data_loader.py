@@ -72,3 +72,20 @@ def load_risks():
     return pd.read_csv(
         "data/institutional/institutional_risk_register.csv"
     )
+
+def load_students():
+    return pd.read_csv(
+        "data/students/students.csv"
+    )
+
+
+def load_student_success():
+    return pd.read_csv(
+        "data/students/student_success.csv"
+    )
+
+
+def load_graduate_readiness():
+    return pd.read_csv(
+        "data/students/graduate_readiness.csv"
+    )
