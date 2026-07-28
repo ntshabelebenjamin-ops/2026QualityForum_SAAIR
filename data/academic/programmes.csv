@@ -4,3 +4,8 @@ P002,BDS,Bachelor of Dental Surgery,Bachelor,School of Oral Health Sciences,Dent
 P003,BPHARM,Bachelor of Pharmacy,Bachelor,School of Pharmacy,Pharmacy,8,640,4,Accredited,SAPC,Dr Naidoo,2025,Active
 P004,BSCNUR,BSc Nursing,Bachelor,School of Health Care Sciences,Nursing,8,480,4,Accredited,SANC,Prof Maseko,2026,Active
 P005,BSBIO,BSc Biomedical Sciences,Bachelor,School of Science and Technology,Biomedical Sciences,8,480,3,Accredited,None,Dr Nkosi,2025,Active
+P006,MMED,Master of Medicine,Master,School of Medicine,Medicine,9,240,4,Accredited,HPCSA,Prof Molefe,2026,Active
+P007,MPH,Master of Public Health,Master,School of Health Care Sciences,Public Health,9,180,2,Accredited,None,Prof Mokoena,2025,Active
+P008,MSCBIO,Master of Biomedical Sciences,Master,School of Science and Technology,Biomedical Sciences,9,180,2,Accredited,None,Dr Sithole,2026,Active
+P009,PHDMED,PhD Medicine,Doctorate,School of Medicine,Medicine,10,360,3,Accredited,None,Prof Ndlovu,2025,Active
+P010,PHDPHARM,PhD Pharmacy,Doctorate,School of Pharmacy,Pharmacy,10,360,3,Accredited,None,Prof Patel,2026,Active
