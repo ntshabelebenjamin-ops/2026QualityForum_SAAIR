@@ -1,4 +1,11 @@
-SERID,ProgrammeID,Criterion,Rating,Strength,Weakness,Evidence,Recommendation,ResponsibleOffice,DueDate,Status
-SER001,P001,Curriculum Design,4,Strong curriculum alignment,Limited elective offerings,Curriculum document,Increase elective modules,Academic Affairs,2026-12-31,Open
-SER002,P001,Teaching and Learning,5,Excellent clinical teaching,None,Peer review reports,Maintain current practice,Faculty Office,2026-12-31,Closed
-SER003,P003,Assessment,3,Fair assessment practices,Delayed feedback,Assessment reports,Reduce turnaround time,Academic Affairs,2026-10-31,In Progress
+SERID,ProgrammeID,Criterion,Standard,Rating,Strength,Weakness,Evidence,RiskLevel,Recommendation,ResponsibleOffice,DueDate,Status
+SER001,P001,Programme Design,CHE Standard 1,5,Programme aligns with national health priorities,None,Curriculum Document,Low,Maintain continuous curriculum review,Academic Affairs,2026-12-31,Closed
+SER002,P001,Teaching and Learning,CHE Standard 2,4,Strong clinical teaching exposure,Limited blended learning,LMS Reports,Medium,Expand digital learning resources,Teaching and Learning Centre,2026-11-30,In Progress
+SER003,P001,Assessment,CHE Standard 3,3,Fair assessment practices,Delayed assessment feedback,Assessment Reports,High,Reduce assessment turnaround time,Academic Affairs,2026-10-31,Open
+SER004,P002,Student Support,CHE Standard 4,4,Strong mentoring programme,Limited counselling services,Student Support Report,Medium,Increase student wellness services,Student Affairs,2026-09-30,In Progress
+SER005,P003,Resources,CHE Standard 5,2,Modern laboratories,Insufficient simulation equipment,Infrastructure Audit,High,Procure additional laboratory equipment,Facilities,2026-12-31,Open
+SER006,P004,Governance,CHE Standard 6,5,Effective programme committee,None,Committee Minutes,Low,Continue current governance practices,Faculty Office,2026-12-31,Closed
+SER007,P005,Research,CHE Standard 7,3,Growing postgraduate supervision,Limited research funding,Research Reports,Medium,Increase external grant applications,Research Office,2026-12-31,Open
+SER008,P003,Community Engagement,CHE Standard 8,4,Strong community pharmacy outreach,Limited rural partnerships,Community Engagement Report,Medium,Expand rural health projects,Faculty Office,2026-10-31,In Progress
+SER009,P002,Infrastructure,CHE Standard 9,3,Modern dental clinics,Simulation laboratory requires upgrades,Facilities Report,High,Upgrade simulation facilities,Facilities,2027-03-31,Open
+SER010,P004,Graduate Attributes,CHE Standard 10,4,Graduates demonstrate professionalism,Digital health competencies need strengthening,Graduate Survey,Medium,Embed digital health skills into curriculum,Curriculum Committee,2026-11-30,In Progress
