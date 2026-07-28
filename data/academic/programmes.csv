@@ -1,0 +1,6 @@
+ProgrammeID,ProgrammeCode,ProgrammeName,QualificationType,School,Department,NQFLevel,Credits,DurationYears,CHEAccreditation,ProfessionalBody,ProgrammeCoordinator,ReviewYear,Status
+P001,MBCHB,MBChB,Bachelor,School of Medicine,Medicine,8,720,6,Accredited,HPCSA,Dr Mokoena,2025,Active
+P002,BDS,Bachelor of Dental Surgery,Bachelor,School of Oral Health Sciences,Dentistry,8,600,5,Accredited,HPCSA,Prof Khumalo,2026,Active
+P003,BPHARM,Bachelor of Pharmacy,Bachelor,School of Pharmacy,Pharmacy,8,640,4,Accredited,SAPC,Dr Naidoo,2025,Active
+P004,BSCNUR,BSc Nursing,Bachelor,School of Health Care Sciences,Nursing,8,480,4,Accredited,SANC,Prof Maseko,2026,Active
+P005,BSBIO,BSc Biomedical Sciences,Bachelor,School of Science and Technology,Biomedical Sciences,8,480,3,Accredited,None,Dr Nkosi,2025,Active
