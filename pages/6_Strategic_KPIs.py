@@ -400,3 +400,91 @@ if not actions.empty:
 else:
 
     st.info("No action tracker available.")
+
+# ==========================================================
+# ANNUAL PERFORMANCE PLAN
+# ==========================================================
+
+st.subheader("📑 Annual Performance Plan")
+
+if not app.empty:
+
+    st.dataframe(
+        app,
+        use_container_width=True,
+        hide_index=True
+    )
+
+else:
+
+    st.info("No Annual Performance Plan data available.")
+
+# ==========================================================
+# QAINSIGHT AI EXECUTIVE SUMMARY
+# ==========================================================
+
+st.subheader("🤖 QAInsight AI Executive Summary")
+
+lowest = kpis.loc[
+    kpis["PerformancePercent"].idxmin()
+]
+
+highest = kpis.loc[
+    kpis["PerformancePercent"].idxmax()
+]
+
+st.info(f"""
+## Institutional Performance Summary
+
+QAInsight AI analysed **{total_kpis} Strategic KPIs**.
+
+### Overall Institutional Performance
+
+**{overall}%**
+
+---
+
+### Best Performing KPI
+
+**Strategic Objective:** {highest['StrategicObjective']}
+
+**KPI:** {highest['KPI']}
+
+Performance: **{highest['PerformancePercent']:.1f}%**
+
+---
+
+### Lowest Performing KPI
+
+**Strategic Objective:** {lowest['StrategicObjective']}
+
+**KPI:** {lowest['KPI']}
+
+Performance: **{lowest['PerformancePercent']:.1f}%**
+
+---
+
+### KPI Distribution
+
+✅ Achieved: **{achieved}**
+
+🟡 On Track: **{on_track}**
+
+🔴 At Risk: **{at_risk}**
+
+---
+
+### Recommended Executive Actions
+
+• Prioritise KPIs performing below 75%.
+
+• Monitor strategic risks through monthly Executive Management Committee meetings.
+
+• Accelerate implementation of overdue institutional actions.
+
+• Strengthen evidence collection for Annual Performance Plan reporting.
+
+• Review improvement plans for underperforming strategic objectives.
+
+• Continue using QAInsight AI to support evidence-based institutional decision making.
+""")
