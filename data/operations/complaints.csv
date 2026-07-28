@@ -1,1 +1,11 @@
-
+ComplaintID,ComplaintDate,ComplainantType,School,Department,ComplaintCategory,ComplaintDescription,Priority,AssignedTo,Status,ResolutionDate,ResolutionDays,CorrectiveAction
+C001,2026-02-15,Student,School of Medicine,Medicine,Assessment,"Delayed release of examination results",High,Academic Affairs,Resolved,2026-02-25,10,"Review assessment workflow and publish timelines"
+C002,2026-03-02,Student,School of Pharmacy,Pharmacy,Facilities,"Simulation laboratory equipment unavailable",High,Facilities,In Progress,,,"Procure and install new simulation equipment"
+C003,2026-03-10,Staff,School of Science and Technology,Biomedical Sciences,ICT,"Frequent LMS system downtime",Medium,ICT Services,Resolved,2026-03-15,5,"Upgrade LMS infrastructure"
+C004,2026-04-08,Student,School of Oral Health Sciences,Dentistry,Student Support,"Slow response from counselling services",Medium,Student Affairs,Resolved,2026-04-18,10,"Increase counselling staff capacity"
+C005,2026-04-20,Alumni,School of Health Care Sciences,Nursing,Graduation,"Delay in issuing qualification certificates",Low,Registrar,Resolved,2026-04-28,8,"Automate certificate processing"
+C006,2026-05-03,Student,School of Medicine,Medicine,Teaching and Learning,"Lecture recordings not uploaded on time",Medium,Teaching and Learning Centre,Open,,,"Strengthen lecturer compliance monitoring"
+C007,2026-05-18,Employer,School of Pharmacy,Pharmacy,Graduate Skills,"Graduates require stronger digital competencies",High,Curriculum Committee,In Progress,,,"Review curriculum to strengthen digital skills"
+C008,2026-06-12,Student,School of Science and Technology,Biomedical Sciences,Library,"Limited access to electronic journals",Medium,Library Services,Resolved,2026-06-19,7,"Expand electronic journal subscriptions"
+C009,2026-06-20,Student,School of Health Care Sciences,Nursing,Residence,"Maintenance requests take too long",Low,Campus Services,Open,,,"Improve maintenance response process"
+C010,2026-07-01,Staff,University Wide,Human Resources,Human Resources,"Vacant academic posts affecting workload",High,Human Resources,In Progress,,,"Accelerate recruitment process"
