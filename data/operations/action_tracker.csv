@@ -1,1 +1,11 @@
-
+ActionID,Source,ReferenceID,ActionTitle,ResponsibleOffice,ResponsiblePerson,Priority,StartDate,DueDate,Status,ProgressPercent,CompletionDate,EvidenceID,Comments
+AT001,Self-Evaluation Report,SER003,Improve assessment feedback turnaround,Academic Affairs,Director Academic Affairs,High,2026-07-01,2026-10-31,In Progress,70,,EV002,"Assessment turnaround reduced from 21 to 16 days."
+AT002,Programme Review,PR002,Upgrade simulation laboratories,Facilities Management,Director Facilities,High,2026-08-01,2027-03-31,In Progress,40,,EV004,"Procurement process underway."
+AT003,Strategic KPI,KPI004,Strengthen postgraduate supervision,Research Office,DVC Research,High,2026-07-01,2026-12-31,In Progress,55,,EV005,"Additional supervisors appointed."
+AT004,Complaint,C002,Replace simulation equipment,Facilities Management,Facilities Manager,High,2026-08-15,2026-12-15,Open,15,,EV006,"Tender evaluation in progress."
+AT005,Audit Finding,AF003,Implement document management controls,Quality Assurance,Director QA,Medium,2026-07-01,2026-10-31,Completed,100,2026-10-20,EV009,"Document control procedures implemented."
+AT006,Risk Register,R006,Implement cybersecurity awareness programme,ICT,CIO,High,2026-07-15,2026-11-15,In Progress,75,,EV007,"Staff awareness campaign completed."
+AT007,Quality Standard,QS003,Review institutional assessment policy,Quality Assurance,Director QA,Medium,2026-08-01,2026-11-30,Open,30,,EV002,"Policy review committee established."
+AT008,Annual Performance Plan,APP007,Increase third-stream income initiatives,Finance,CFO,High,2026-07-01,2026-12-31,In Progress,45,,EV008,"Industry partnership discussions ongoing."
+AT009,Complaint,C010,Accelerate recruitment of academic staff,Human Resources,HR Director,High,2026-07-15,2026-11-30,Open,25,,,"Recruitment advertisements published."
+AT010,CHE Institutional Audit,AF010,Develop institutional quality action dashboard,Quality Assurance,Director QA,Medium,2026-08-01,2026-12-31,In Progress,50,,EV009,"Dashboard development commenced."
