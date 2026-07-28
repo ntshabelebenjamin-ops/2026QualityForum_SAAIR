@@ -9,6 +9,21 @@ from utils.data_loader import (
     load_actions
 )
 
+# Clean Status fields
+kpis["Status"] = (
+    kpis["Status"]
+    .astype(str)
+    .str.strip()
+    .str.title()
+)
+
+actions["Status"] = (
+    actions["Status"]
+    .astype(str)
+    .str.strip()
+    .str.title()
+)
+
 st.set_page_config(
     page_title="Strategic KPIs",
     page_icon="📈",
