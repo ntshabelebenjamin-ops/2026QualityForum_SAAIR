@@ -37,30 +37,78 @@ plans = load_improvement_plans()
 # INSTITUTIONAL HEALTH SCORE
 # ==========================================================
 
-kpi_score = kpis["PerformancePercent"].mean()
-review_score = reviews["OverallScore"].mean()
-student_score = students["GraduationLikelihood"].mean()
-voice_score = voice["OverallSatisfaction"].mean() * 20
+# Convert numeric columns safely
 
-high_risks = (risks["RiskLevel"] == "High").sum()
-
-risk_score = max(0, 100 - (high_risks * 5))
-
-health = round(
-    (
-        kpi_score * 0.30 +
-        review_score * 0.25 +
-        student_score * 0.20 +
-        voice_score * 0.15 +
-        risk_score * 0.10
-    ),
-    1
+kpis["PerformancePercent"] = pd.to_numeric(
+    kpis["PerformancePercent"],
+    errors="coerce"
 )
 
-# ==========================================================
-# STATUS
-# ==========================================================
+reviews["OverallScore"] = pd.to_numeric(
+    reviews["OverallScore"],
+    errors="coerce"
+)
 
+students["GraduationLikelihood"] = pd.to_numeric(
+    students["GraduationLikelihood"],
+    errors="coerce"
+)
+
+voice["OverallSatisfaction"] = pd.to_numeric(
+    voice["OverallSatisfaction"],
+    errors="coerce"
+)
+
+# Calculate averages
+
+kpi_score = kpis["PerformancePercent"].mean(skipna=True)
+
+review_score = reviews["OverallScore"].mean(skipna=True)
+
+student_score = students["GraduationLikelihood"].mean(skipna=True)
+
+voice_score = (
+    voice["OverallSatisfaction"]
+    .mean(skipna=True)
+) * 20
+
+# Enterprise risk score
+
+high_risks = (
+    risks["RiskLevel"]
+    .astype(str)
+    .str.upper()
+    .eq("HIGH")
+    .sum()
+)
+
+risk_score = max(
+    0,
+    100 - (high_risks * 5)
+)
+
+# Replace NaN values with zero
+
+kpi_score = 0 if pd.isna(kpi_score) else kpi_score
+review_score = 0 if pd.isna(review_score) else review_score
+student_score = 0 if pd.isna(student_score) else student_score
+voice_score = 0 if pd.isna(voice_score) else voice_score
+
+# Institutional Health Score
+
+health = round(
+
+    (
+        kpi_score * 0.30
+        + review_score * 0.25
+        + student_score * 0.20
+        + voice_score * 0.15
+        + risk_score * 0.10
+    ),
+
+    1
+
+)
 if health >= 90:
     status = "🟢 Excellent"
 
@@ -86,6 +134,37 @@ c2.metric(
 )
 
 st.divider()
+
+# ==========================================================
+# STATUS
+# ==========================================================
+
+if pd.isna(health):
+
+    status = "⚪ No Data"
+
+elif health >= 90:
+
+    status = "🟢 Excellent"
+
+elif health >= 75:
+
+    status = "🟡 Good"
+
+elif health >= 60:
+
+    status = "🟠 Needs Attention"
+
+else:
+
+    status = "🔴 Critical"
+
+
+st.write("KPI Score:", kpi_score)
+st.write("Programme Review Score:", review_score)
+st.write("Student Score:", student_score)
+st.write("Student Voice:", voice_score)
+st.write("Risk Score:", risk_score)
 
 # ==========================================================
 # EXECUTIVE SUMMARY
