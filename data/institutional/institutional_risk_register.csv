@@ -1,1 +1,11 @@
-
+RiskID,RiskCategory,RiskDescription,StrategicObjective,RiskOwner,Likelihood,Impact,RiskScore,RiskLevel,MitigationStrategy,CurrentStatus,ReviewDate
+R001,Academic,Poor student progression rates,Teaching and Learning,DVC Academic,4,5,20,High,Strengthen academic support and early warning systems,Monitoring,2026-09-30
+R002,Academic,Programme accreditation delays,Quality Assurance,Director QA,3,5,15,High,Implement accreditation action plans,In Progress,2026-10-31
+R003,Research,Declining research outputs,Research and Innovation,DVC Research,3,4,12,Medium,Increase research funding and mentorship,Monitoring,2026-09-30
+R004,Financial,Reduced government funding,Financial Sustainability,CFO,4,5,20,High,Diversify revenue through third-stream income,Open,2026-09-30
+R005,Infrastructure,Delays in infrastructure projects,Infrastructure,Director Facilities,4,4,16,High,Strengthen project management and contractor oversight,In Progress,2026-11-30
+R006,ICT,Cybersecurity breach affecting student data,Digital Transformation,CIO,3,5,15,High,Enhance cybersecurity controls and staff awareness,Monitoring,2026-09-15
+R007,Student Affairs,Declining student satisfaction,Student Experience,Dean of Students,3,4,12,Medium,Improve student support and communication,Monitoring,2026-10-31
+R008,Compliance,Failure to meet regulatory requirements,Governance,Registrar,2,5,10,Medium,Conduct regular compliance audits,Monitoring,2026-12-31
+R009,Human Resources,Critical staff vacancies,Institutional Capacity,HR Director,3,4,12,Medium,Accelerate recruitment and succession planning,Open,2026-10-31
+R010,Reputation,Negative institutional reputation due to poor service delivery,Reputation Management,Vice-Chancellor,2,5,10,Medium,Implement stakeholder engagement and communication strategy,Monitoring,2026-12-31
