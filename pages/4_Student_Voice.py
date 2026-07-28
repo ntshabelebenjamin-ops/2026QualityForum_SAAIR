@@ -46,25 +46,91 @@ if selected_programme != "All":
 # KPI CARDS
 # ---------------------------------------------------
 
+# Convert numeric columns safely
+numeric_columns = [
+    "OverallSatisfaction",
+    "TeachingQuality",
+    "AssessmentFeedback",
+    "LearningResources",
+    "StudentSupport",
+    "DigitalLearning",
+    "CampusFacilities"
+]
+
+for col in numeric_columns:
+    if col in filtered.columns:
+        filtered[col] = pd.to_numeric(
+            filtered[col],
+            errors="coerce"
+        )
+
 responses = len(filtered)
 
 avg_satisfaction = round(
-    filtered["OverallSatisfaction"].mean(),
+    filtered["OverallSatisfaction"].mean(skipna=True),
     2
 )
 
-recommendation = round(
-    filtered["LikelihoodToRecommend"].mean(),
-    2
-)
+# ---------------------------------------------------
+# RECOMMENDATION SCORE
+# ---------------------------------------------------
+
+if "LikelihoodToRecommend" in filtered.columns:
+
+    recommend_col = filtered["LikelihoodToRecommend"]
+
+    # Try numeric first
+    recommend_numeric = pd.to_numeric(
+        recommend_col,
+        errors="coerce"
+    )
+
+    if recommend_numeric.notna().sum() > 0:
+
+        recommendation = round(
+            recommend_numeric.mean(),
+            2
+        )
+
+    else:
+
+        # Handle Yes / No values
+        yes_rate = (
+            recommend_col
+            .astype(str)
+            .str.strip()
+            .str.upper()
+            .eq("YES")
+            .mean()
+        )
+
+        if pd.isna(yes_rate):
+
+            recommendation = "N/A"
+
+        else:
+
+            recommendation = f"{yes_rate * 100:.1f}%"
+
+else:
+
+    recommendation = "N/A"
 
 positive = (
-    filtered["Sentiment"] == "Positive"
-).sum()
+    filtered["Sentiment"]
+    .astype(str)
+    .str.strip()
+    .str.title()
+    .eq("Positive")
+    .sum()
+)
 
 c1, c2, c3, c4 = st.columns(4)
 
-c1.metric("Responses", responses)
+c1.metric(
+    "Responses",
+    responses
+)
 
 c2.metric(
     "Overall Satisfaction",
