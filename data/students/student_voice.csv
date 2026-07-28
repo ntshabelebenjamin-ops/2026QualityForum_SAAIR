@@ -1,1 +1,11 @@
-
+SurveyID,StudentID,ProgrammeID,SurveyYear,TeachingQuality,AssessmentFeedback,LearningResources,StudentSupport,DigitalLearning,CampusFacilities,OverallSatisfaction,LikelihoodToRecommend,Comment,Sentiment
+SV001,ST001,P001,2026,5,4,5,5,4,4,5,Yes,"Lecturers are knowledgeable and supportive.","Positive"
+SV002,ST002,P001,2026,4,2,4,3,3,4,3,Maybe,"Assessment feedback takes too long.","Negative"
+SV003,ST003,P002,2026,5,5,5,4,4,5,5,Yes,"Excellent clinical training and facilities.","Positive"
+SV004,ST004,P003,2026,3,2,3,3,3,2,2,No,"Simulation laboratory needs upgrading.","Negative"
+SV005,ST005,P004,2026,5,5,4,5,4,5,5,Yes,"Student support services are excellent.","Positive"
+SV006,ST006,P005,2026,3,3,2,3,2,3,3,Maybe,"Need more online learning resources.","Neutral"
+SV007,ST007,P007,2026,5,4,5,4,5,4,5,Yes,"The programme prepares us well for practice.","Positive"
+SV008,ST008,P008,2026,4,4,4,3,4,3,4,Yes,"Research supervision is very good.","Positive"
+SV009,ST009,P009,2026,5,5,5,5,5,5,5,Yes,"Excellent doctoral research environment.","Positive"
+SV010,ST010,P010,2026,4,3,4,4,4,4,4,Maybe,"More research funding opportunities are needed.","Neutral"
