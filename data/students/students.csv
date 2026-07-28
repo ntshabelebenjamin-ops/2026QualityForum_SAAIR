@@ -1,1 +1,11 @@
-
+StudentID,StudentNumber,ProgrammeID,School,StudyLevel,YearOfStudy,Gender,AgeGroup,Race,Province,FundingType,ResidenceStatus,RegistrationStatus,GPA,CreditsCompleted,CreditsRegistered,AttendanceRate,RiskCategory
+ST001,20260001,P001,School of Medicine,Undergraduate,1,Female,18-20,African,Gauteng,NSFAS,On-Campus,Registered,72,120,120,95,Low
+ST002,20260002,P001,School of Medicine,Undergraduate,2,Male,21-23,African,Limpopo,Self-Funded,Off-Campus,Registered,61,108,120,82,Medium
+ST003,20260003,P002,School of Oral Health Sciences,Undergraduate,3,Female,21-23,Coloured,Western Cape,Bursary,On-Campus,Registered,77,360,360,96,Low
+ST004,20260004,P003,School of Pharmacy,Undergraduate,4,Male,24-26,Indian,KwaZulu-Natal,NSFAS,Off-Campus,Registered,55,420,480,74,High
+ST005,20260005,P004,School of Health Care Sciences,Undergraduate,2,Female,18-20,African,North West,Self-Funded,On-Campus,Registered,81,220,240,98,Low
+ST006,20260006,P005,School of Science and Technology,Undergraduate,1,Male,18-20,African,Mpumalanga,NSFAS,Residence,Registered,49,60,120,65,High
+ST007,20260007,P007,School of Health Care Sciences,Postgraduate,1,Female,24-26,African,Gauteng,Employer Sponsored,Off-Campus,Registered,84,90,90,94,Low
+ST008,20260008,P008,School of Science and Technology,Postgraduate,2,Male,27-30,White,Gauteng,Self-Funded,Off-Campus,Registered,79,180,180,92,Low
+ST009,20260009,P009,School of Medicine,Doctoral,2,Female,31-35,African,Limpopo,Research Grant,Off-Campus,Registered,88,240,240,96,Low
+ST010,20260010,P010,School of Pharmacy,Doctoral,1,Male,27-30,African,Gauteng,Research Grant,Off-Campus,Registered,76,120,120,91,Medium
