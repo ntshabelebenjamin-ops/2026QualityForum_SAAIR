@@ -1,1 +1,11 @@
-
+KPIID,StrategicObjective,KPA,KPI,ResponsibleOffice,AnnualTarget,CurrentPerformance,PerformancePercent,Status,RiskLevel,Evidence,ImprovementAction,ReportingQuarter
+KPI001,Teaching and Learning,Student Success,First-Time Entering Student Success Rate,Academic Affairs,85,82,96.5,On Track,Medium,Student Success Report,Expand academic support programmes,Q2
+KPI002,Teaching and Learning,Curriculum,Programme Accreditation Compliance,Quality Assurance,100,98,98.0,On Track,Low,CHE Accreditation Reports,Complete remaining accreditation actions,Q2
+KPI003,Research and Innovation,Research Output,Accredited Research Publications,Research Office,450,395,87.8,Below Target,Medium,DHET Research Report,Increase publication support,Q2
+KPI004,Research and Innovation,Postgraduate Studies,Masters and Doctoral Graduations,Research Office,320,275,85.9,Below Target,High,Graduation Records,Strengthen postgraduate supervision,Q2
+KPI005,Student Experience,Graduate Employability,Graduate Employment Rate,Career Services,90,84,93.3,On Track,Medium,Graduate Destination Survey,Strengthen employer partnerships,Q2
+KPI006,Digital Transformation,Digital Learning,LMS Module Utilisation,ICT,95,88,92.6,On Track,Medium,LMS Analytics,Provide staff digital training,Q2
+KPI007,Financial Sustainability,Revenue Generation,Third Stream Income,Finance,50000000,43500000,87.0,Below Target,High,Financial Statements,Increase industry partnerships,Q2
+KPI008,Infrastructure,Facilities,Completion of Infrastructure Projects,Facilities Management,100,73,73.0,Off Track,High,Project Reports,Accelerate capital projects,Q2
+KPI009,Governance,Compliance,Internal Audit Findings Closed,Internal Audit,100,94,94.0,On Track,Low,Audit Reports,Close remaining findings,Q2
+KPI010,Community Engagement,Social Impact,Community Engagement Projects,Community Engagement Office,75,79,105.3,Exceeded Target,Low,Community Reports,Share best practices,Q2
