@@ -249,3 +249,8 @@ def load_audit_findings():
             "TargetClosureDate"
         ]
     )
+
+def load_improvement_plans():
+    return _load_csv(
+        "data/operations/quality_improvement_tracker.csv"
+    )
