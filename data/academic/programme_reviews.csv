@@ -1,3 +1,11 @@
-ReviewID,ProgrammeID,ReviewType,ReviewDate,PanelChair,Outcome,Recommendation,ActionPlanOwner,Status
-PR001,P001,Internal,2026-03-15,Prof Dlamini,Approved,Enhance community engagement,Dean,Completed
-PR002,P003,External,2026-05-22,Prof Jacobs,Conditionally Approved,Improve assessment turnaround,Head of Department,In Progress
+ReviewID,ProgrammeID,ReviewYear,ReviewType,PanelChair,PanelMembers,Outcome,OverallScore,Strengths,AreasForImprovement,Recommendations,ActionOwner,DueDate,Status
+PR001,P001,2026,Internal,Prof Dlamini,5,Approved,92,Excellent curriculum alignment,Increase blended learning,Expand digital learning resources,Dean Medicine,2026-12-31,Completed
+PR002,P002,2026,External,Prof Jacobs,6,Approved with Conditions,81,Strong clinical training,Simulation facilities require upgrading,Upgrade simulation laboratory,Dean Oral Health,2027-03-31,In Progress
+PR003,P003,2026,Professional Body,Prof Patel,7,Approved with Conditions,74,Committed academic staff,Assessment feedback delays,Reduce assessment turnaround time,Head of Pharmacy,2026-11-30,Open
+PR004,P004,2026,Internal,Prof Molefe,5,Approved,88,Excellent student support,None,Continue monitoring student success,Dean Health Care Sciences,2026-12-31,Completed
+PR005,P005,2026,External,Prof Nkosi,6,Requires Improvement,69,Good research potential,Research supervision capacity,Recruit additional supervisors,Dean Science & Technology,2027-06-30,Open
+PR006,P006,2026,Professional Body,Prof Mokoena,7,Approved,90,Excellent specialist training,None,Maintain current quality systems,Dean Medicine,2026-12-31,Completed
+PR007,P007,2026,Internal,Prof Sithole,5,Approved,85,Community engagement,Increase postgraduate supervision,Strengthen research mentorship,Head Public Health,2027-03-31,In Progress
+PR008,P008,2026,External,Prof Ndlovu,6,Approved with Conditions,79,Research productivity,Infrastructure limitations,Improve laboratory infrastructure,Dean Science & Technology,2027-06-30,Open
+PR009,P009,2026,Professional Body,Prof Khumalo,7,Approved,93,Excellent doctoral supervision,None,Maintain international collaborations,Dean Medicine,2026-12-31,Completed
+PR010,P010,2026,Professional Body,Prof Naidoo,7,Approved with Conditions,82,Strong postgraduate research,Funding limitations,Increase external research grants,Dean Pharmacy,2027-03-31,In Progress
