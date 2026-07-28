@@ -1,1 +1,11 @@
-
+ImprovementID,Source,ReferenceID,School,ImprovementArea,Recommendation,ResponsibleOffice,ResponsiblePerson,Priority,StartDate,DueDate,Status,ProgressPercent,ExpectedOutcome
+IP001,Self-Evaluation Report,SER003,School of Medicine,Assessment,"Reduce assessment feedback turnaround time",Academic Affairs,Director Academic Affairs,High,2026-07-01,2026-10-31,In Progress,60,"Assessment feedback provided within 14 days"
+IP002,Programme Review,PR002,School of Oral Health Sciences,Infrastructure,"Upgrade simulation laboratory facilities",Facilities Management,Director Facilities,High,2026-08-01,2027-03-31,In Progress,35,"Improved practical training facilities"
+IP003,Student Voice,SV004,School of Pharmacy,Digital Learning,"Increase access to digital learning resources",Teaching and Learning Centre,Director TLC,Medium,2026-07-15,2026-11-30,Open,20,"Improved student satisfaction with digital learning"
+IP004,Strategic KPI,KPI004,University Wide,Research,"Strengthen postgraduate supervision",Research Office,DVC Research,High,2026-07-01,2026-12-31,In Progress,55,"Increase postgraduate completion rates"
+IP005,Complaint,C002,School of Pharmacy,Facilities,"Replace obsolete simulation equipment",Facilities Management,Facilities Manager,High,2026-08-15,2026-12-15,Open,10,"Modern simulation laboratory available"
+IP006,Audit Finding,AF003,University Wide,Governance,"Improve document management controls",Internal Audit,Chief Audit Executive,Medium,2026-07-01,2026-10-31,Completed,100,"Improved governance and compliance"
+IP007,Risk Register,R006,University Wide,Cybersecurity,"Strengthen cybersecurity awareness training",ICT,CIO,High,2026-07-15,2026-11-15,In Progress,70,"Reduced cybersecurity incidents"
+IP008,Graduate Destination,GD004,School of Pharmacy,Career Development,"Strengthen employer engagement initiatives",Career Services,Director Career Services,Medium,2026-08-01,2027-01-31,Open,15,"Improved graduate employment rates"
+IP009,Strategic KPI,KPI008,University Wide,Infrastructure,"Accelerate capital infrastructure projects",Facilities Management,Director Facilities,High,2026-07-01,2026-12-31,In Progress,45,"Improved infrastructure delivery"
+IP010,Quality Standards,QS003,University Wide,Assessment Quality,"Review institutional assessment policy",Quality Assurance,Director Quality Assurance,Medium,2026-08-01,2026-11-30,Open,25,"Enhanced assessment quality assurance"
