@@ -49,6 +49,23 @@ def load_actions():
         "data/operations/action_tracker.csv"
     )
 
+def load_modules():
+    return pd.read_csv(
+        "data/academic/modules.csv"
+    )
+
+
+def load_programme_reviews():
+    return pd.read_csv(
+        "data/academic/programme_reviews.csv"
+    )
+
+
+def load_curriculum():
+    return pd.read_csv(
+        "data/academic/curriculum_mapping.csv"
+    )
+
 
 def load_risks():
 
