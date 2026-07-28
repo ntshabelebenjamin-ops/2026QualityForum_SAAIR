@@ -1,4 +1,11 @@
-ProgrammeID,GraduateAttribute,ModuleCode,AssessmentMethod,AchievementLevel
-P001,Critical Thinking,MED201,Written Examination,Achieved
-P001,Communication,MED101,Presentation,Achieved
-P003,Ethical Practice,PHA302,Case Study,Partially Achieved
+MappingID,ProgrammeID,ProgrammeLearningOutcome,GraduateAttribute,ModuleCode,ModuleName,AssessmentMethod,AchievementLevel,ReviewStatus
+CM001,P001,Apply clinical knowledge,Critical Thinking,MED101,Anatomy I,Written Examination,Achieved,Reviewed
+CM002,P001,Communicate effectively,Communication Skills,MED201,Physiology II,Case Presentation,Achieved,Reviewed
+CM003,P002,Provide patient-centred oral care,Professional Ethics,DEN101,Oral Biology,Clinical Assessment,Achieved,Reviewed
+CM004,P002,Use digital technologies,Digital Literacy,DEN202,Prosthodontics II,Simulation Assessment,Partially Achieved,Under Review
+CM005,P003,Ensure safe medicine use,Ethical Practice,PHA101,Pharmacology I,Case Study,Achieved,Reviewed
+CM006,P003,Apply AI-supported decision making,AI Literacy,PHA302,Clinical Pharmacy,Project,Not Yet Achieved,Under Review
+CM007,P004,Deliver quality nursing care,Teamwork,HCS101,Nursing Fundamentals,Clinical Portfolio,Achieved,Reviewed
+CM008,P004,Promote community health,Leadership,HCS204,Community Health,Community Project,Achieved,Reviewed
+CM009,P005,Conduct scientific investigations,Research Skills,SCI101,Biology I,Research Report,Achieved,Reviewed
+CM010,P005,Interpret biomedical data,Data Literacy,SCI205,Biochemistry II,Data Analysis Assignment,Partially Achieved,Under Review
