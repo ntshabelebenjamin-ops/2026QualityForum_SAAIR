@@ -1,1 +1,11 @@
-
+ReadinessID,StudentID,ProgrammeID,SurveyYear,CriticalThinking,Communication,Teamwork,Leadership,DigitalLiteracy,AILiteracy,ProblemSolving,EthicalPractice,Entrepreneurship,OverallReadiness,WorkIntegratedLearningCompleted,CareerPreparedness
+GR001,ST001,P001,2026,5,5,4,4,4,3,5,5,3,4.2,Yes,High
+GR002,ST002,P001,2026,4,4,4,3,3,2,4,5,2,3.4,Yes,Medium
+GR003,ST003,P002,2026,5,5,5,4,4,3,5,5,3,4.4,Yes,High
+GR004,ST004,P003,2026,3,3,3,3,2,2,3,4,2,2.8,Yes,Low
+GR005,ST005,P004,2026,5,5,5,5,4,3,5,5,3,4.6,Yes,High
+GR006,ST006,P005,2026,3,3,4,3,2,2,3,4,2,2.9,No,Low
+GR007,ST007,P007,2026,5,5,5,4,5,4,5,5,3,4.6,Yes,High
+GR008,ST008,P008,2026,4,4,4,4,5,4,4,5,3,4.1,Yes,High
+GR009,ST009,P009,2026,5,5,5,5,5,5,5,5,4,4.9,Yes,High
+GR010,ST010,P010,2026,4,4,4,4,4,4,4,5,3,4.0,Yes,Medium
