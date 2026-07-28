@@ -1,1 +1,11 @@
-
+StandardID,Framework,StandardCode,StandardName,Description,Owner,ComplianceStatus,ComplianceScore,Evidence,LastReviewDate,NextReviewDate,RiskLevel,ImprovementAction
+QS001,CHE,CHE-01,Programme Design,Programmes are appropriately designed and aligned with national priorities,Quality Assurance,Fully Compliant,100,Programme Approval Documentation,2026-03-31,2028-03-31,Low,Maintain curriculum review cycle
+QS002,CHE,CHE-02,Teaching and Learning,Teaching promotes effective student learning,Teaching and Learning Centre,Partially Compliant,86,LMS Analytics and Peer Reviews,2026-03-31,2027-03-31,Medium,Increase blended learning capacity
+QS003,CHE,CHE-03,Assessment,Assessment practices are fair valid and reliable,Academic Affairs,Partially Compliant,78,Assessment Moderation Reports,2026-03-31,2027-03-31,High,Reduce assessment feedback turnaround time
+QS004,CHE,CHE-04,Student Support,Student support services promote success,Student Affairs,Fully Compliant,94,Student Support Reports,2026-03-31,2027-03-31,Low,Expand wellness initiatives
+QS005,CHE,CHE-05,Infrastructure,Learning resources support teaching and learning,Facilities Management,Partially Compliant,72,Infrastructure Audit,2026-03-31,2027-03-31,High,Upgrade simulation laboratories
+QS006,DHET,DHET-01,Strategic Planning,Institution achieves strategic performance targets,Institutional Planning,Partially Compliant,84,APP Performance Reports,2026-06-30,2027-06-30,Medium,Strengthen KPI monitoring
+QS007,HPCSA,HPCSA-01,Clinical Training,Clinical training meets professional standards,School of Medicine,Fully Compliant,97,HPCSA Accreditation Report,2026-05-31,2028-05-31,Low,Maintain current clinical partnerships
+QS008,SANC,SANC-01,Nursing Education,Nursing programmes meet professional requirements,School of Health Care Sciences,Fully Compliant,96,SANC Accreditation Report,2026-04-30,2028-04-30,Low,Continue curriculum enhancement
+QS009,SAPC,SAPC-01,Pharmacy Education,Pharmacy curriculum meets professional standards,School of Pharmacy,Partially Compliant,81,SAPC Evaluation Report,2026-04-30,2027-04-30,Medium,Strengthen experiential learning
+QS010,Institutional,SMU-01,Continuous Improvement,Improvement actions are monitored and completed,Quality Assurance,Partially Compliant,83,Improvement Plan Register,2026-06-30,2027-06-30,Medium,Improve action tracking and reporting
