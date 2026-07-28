@@ -6,7 +6,29 @@ from utils.data_loader import (
     load_risks,
     load_actions
 )
+st.sidebar.header("Filters")
 
+selected_office = st.sidebar.selectbox(
+    "Responsible Office",
+    ["All"] + sorted(kpis["ResponsibleOffice"].unique().tolist())
+)
+
+selected_status = st.sidebar.selectbox(
+    "Status",
+    ["All"] + sorted(kpis["Status"].unique().tolist())
+)
+
+filtered_kpis = kpis.copy()
+
+if selected_office != "All":
+    filtered_kpis = filtered_kpis[
+        filtered_kpis["ResponsibleOffice"] == selected_office
+    ]
+
+if selected_status != "All":
+    filtered_kpis = filtered_kpis[
+        filtered_kpis["Status"] == selected_status
+    ]
 from utils.ai_engine import (
     executive_summary,
     high_risk_items,
