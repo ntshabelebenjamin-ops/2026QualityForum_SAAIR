@@ -1,1 +1,11 @@
-
+APPID,StrategicObjective,KPA,KPI,ResponsibleOffice,ReportingQuarter,AnnualTarget,QuarterTarget,ActualPerformance,Variance,PerformanceStatus,EvidenceSubmitted,CorrectiveAction,DueDate
+APP001,Teaching and Learning,Student Success,First-Year Retention Rate,Academic Affairs,Q2,85,84,82,-2,Below Target,Yes,Expand first-year mentoring programme,2026-10-31
+APP002,Teaching and Learning,Curriculum Review,Programmes Reviewed,Quality Assurance,Q2,10,5,5,0,Achieved,Yes,Continue scheduled reviews,2026-12-31
+APP003,Research and Innovation,Research Outputs,Accredited Publications,Research Office,Q2,450,225,198,-27,Below Target,Yes,Increase writing retreats and publication incentives,2026-11-30
+APP004,Research and Innovation,Postgraduate Success,Doctoral Graduations,Research Office,Q2,120,60,52,-8,Below Target,Yes,Strengthen postgraduate supervision,2026-12-31
+APP005,Student Experience,Graduate Employability,Graduate Employment Rate,Career Services,Q2,90,88,84,-4,Below Target,Yes,Expand employer engagement initiatives,2026-11-30
+APP006,Digital Transformation,Learning Technologies,LMS Adoption Rate,ICT,Q2,95,92,90,-2,On Track,Yes,Increase staff digital skills training,2026-10-31
+APP007,Financial Sustainability,Revenue,Third Stream Income,Finance,Q2,50000000,25000000,22000000,-3000000,Below Target,Yes,Develop new industry partnerships,2026-12-31
+APP008,Infrastructure,Capital Projects,Infrastructure Projects Completed,Facilities,Q2,100,50,37,-13,Off Track,Yes,Fast-track procurement and project monitoring,2026-12-31
+APP009,Governance,Compliance,Audit Findings Resolved,Internal Audit,Q2,100,90,94,4,Exceeded Target,Yes,Maintain quarterly audit reviews,2026-09-30
+APP010,Community Engagement,Social Impact,Community Projects Delivered,Community Engagement,Q2,75,38,40,2,Exceeded Target,Yes,Document and scale successful projects,2026-12-31
