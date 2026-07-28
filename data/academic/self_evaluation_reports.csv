@@ -1,1 +1,4 @@
 SERID,ProgrammeID,Criterion,Rating,Strength,Weakness,Evidence,Recommendation,ResponsibleOffice,DueDate,Status
+SER001,P001,Curriculum Design,4,Strong curriculum alignment,Limited elective offerings,Curriculum document,Increase elective modules,Academic Affairs,2026-12-31,Open
+SER002,P001,Teaching and Learning,5,Excellent clinical teaching,None,Peer review reports,Maintain current practice,Faculty Office,2026-12-31,Closed
+SER003,P003,Assessment,3,Fair assessment practices,Delayed feedback,Assessment reports,Reduce turnaround time,Academic Affairs,2026-10-31,In Progress
