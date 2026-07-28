@@ -89,3 +89,8 @@ def load_graduate_readiness():
     return pd.read_csv(
         "data/students/graduate_readiness.csv"
     )
+
+def load_student_voice():
+    return pd.read_csv(
+        "data/students/student_voice.csv"
+    )
