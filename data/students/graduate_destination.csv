@@ -1,1 +1,11 @@
-
+DestinationID,StudentID,ProgrammeID,GraduationYear,EmploymentStatus,EmploymentSector,Occupation,QualificationAligned,MonthsToEmployment,FurtherStudy,Institution,Entrepreneur,EmployerSatisfaction,GraduateSatisfaction,SalaryBand
+GD001,ST001,P001,2026,Employed,Public Health,Medical Officer,Yes,2,None,None,No,5,5,High
+GD002,ST002,P001,2026,Employed,Private Health,General Practitioner,Yes,4,None,None,No,4,4,Medium
+GD003,ST003,P002,2026,Employed,Private Dental Practice,Dentist,Yes,1,None,None,No,5,5,High
+GD004,ST004,P003,2026,Seeking Employment,None,None,No,6,None,None,No,None,3,None
+GD005,ST005,P004,2026,Employed,Public Hospital,Professional Nurse,Yes,2,None,None,No,5,5,Medium
+GD006,ST006,P005,2026,Further Study,Higher Education,Honours Student,Yes,0,Yes,SMU,No,None,4,None
+GD007,ST007,P007,2026,Employed,Government,Epidemiologist,Yes,3,No,None,No,5,5,High
+GD008,ST008,P008,2026,Entrepreneur,Health Technology,Founder,Yes,5,No,None,Yes,None,5,High
+GD009,ST009,P009,2026,Employed,University,Lecturer,Yes,1,No,None,No,5,5,High
+GD010,ST010,P010,2026,Employed,Pharmaceutical Industry,Research Scientist,Yes,3,No,None,No,4,4,High
